@@ -1,6 +1,19 @@
+body{
+    background-color: lightblue;
+}
+
 .posts-main {
+    margin: auto;
     border-collapse: collapse;
 }
+.posts-title {
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 40px;
+    color: white;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: blue;
 
 .post-main {
     border: 1px solid #999;
