@@ -8,7 +8,10 @@ var baseRegistry = require('rest/mime/registry');
 
 var registry = baseRegistry.child();
 
-registry.register('application/hal+json', require('rest/mime/type/application/hal'));
+registry.register(
+    'application/hal+json',
+    require('rest/mime/type/application/hal')
+);
 
 module.exports = rest
 		.wrap(mime, { registry: registry })

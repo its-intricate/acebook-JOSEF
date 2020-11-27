@@ -5,11 +5,11 @@ import PostsBuilder from './posts/postsBuilder'
 
 class App extends React.Component {
 
-  render() {
-    return (
-      <PostsBuilder />
-    )
-  }
+    render() {
+        return (
+            <PostsBuilder />
+        )
+    }
 }
 
 ReactDOM.render(
