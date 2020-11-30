@@ -6,6 +6,7 @@ const Post = (props) => {
 			<div className='post-content'>
 				{props.post.content}
 			</div>
+			<button>Delete</button>
 		</div>
 	)
 }
