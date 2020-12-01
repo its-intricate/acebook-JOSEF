@@ -9,7 +9,7 @@ class Posts extends React.Component {
     }
 
     handleDelete(event) {
-      const id = event.log.id
+      const id = event.target.id
       this.props.onDelete(id);
     }
 
@@ -17,7 +17,7 @@ class Posts extends React.Component {
 		return (
       <article className='posts-main'>
         <h1 className='posts-title'>
-          Posts
+           Posts
         </h1>
   			<div className='posts-items'>
   				{this.getPosts()}
@@ -27,9 +27,9 @@ class Posts extends React.Component {
 	}
 
     getPosts() {
-    return this.props.posts.map(post =>
-        <Post key={post._links.self.href} post={post} handleDelete={this.handleDelete}/>
-    );
+        return this.props.posts.map(post =>
+            <Post key={post._links.self.href} post={post} handleDelete={this.handleDelete}/>
+        );
     }
 
 }
