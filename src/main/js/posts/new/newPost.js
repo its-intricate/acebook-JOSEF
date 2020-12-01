@@ -11,6 +11,13 @@ class NewPost extends React.Component {
   handleSubmit(event) {
     const content = event.target.content;
     alert(content.value);
+    client({method: 'POST', path: '/api/posts', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content: content.value })
+    })
+    console.log('DONE')
+    // curl -X POST 'localhost:8080/api/posts'
+    // -d '{"content": "Hi, Folks!"}'
+    // -H 'Content-Type: application/json'
   }
 
   render() {
