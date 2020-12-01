@@ -23,5 +23,9 @@
     "webpack": "webpack -d --watch"
   },
   "author": "dearshrewdwit",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/its-intricate/acebook-JOSEF.git"
+  }
 }

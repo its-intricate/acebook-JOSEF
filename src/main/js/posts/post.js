@@ -6,6 +6,7 @@ const Post = (props) => {
 			<div className='post-content'>
 				{props.post.content}
 			</div>
+            <button id={props.post._links.self.href} onClick={props.handleDelete}>Delete</button>
 		</div>
 	)
 }

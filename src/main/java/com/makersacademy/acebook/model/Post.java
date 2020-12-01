@@ -15,7 +15,7 @@ public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    public Long id;
     private String content;
 
     private Post() {}
@@ -23,5 +23,4 @@ public class Post {
     public Post(String content) {
         this.content = content;
     }
-
 }

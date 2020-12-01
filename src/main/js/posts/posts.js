@@ -2,10 +2,16 @@ import React from 'react';
 import Post from './post'
 
 class Posts extends React.Component {
-  constructor(props) {
+    constructor(props) {
     super(props);
     this.getPosts = this.getPosts.bind(this);
-  }
+    this.handleDelete = this.handleDelete.bind(this);
+    }
+
+    handleDelete(event) {
+      const id = event.log.id
+      this.props.onDelete(id);
+    }
 
 	render() {
 		return (
@@ -20,11 +26,12 @@ class Posts extends React.Component {
 		)
 	}
 
-  getPosts() {
+    getPosts() {
     return this.props.posts.map(post =>
-			<Post key={post._links.self.href} post={post}/>
-		);
-  }
+        <Post key={post._links.self.href} post={post} handleDelete={this.handleDelete}/>
+    );
+    }
+
 }
 
 export default Posts;
