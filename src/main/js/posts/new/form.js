@@ -1,10 +1,13 @@
 import React from 'react';
 
 class NewPostForm extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <form>
-        <input type="text" name="ace" placeholder="i just bought a broccoli"></input>
+      <form onSubmit={this.props.handleSubmit}>
+        <input type="text" name="content" placeholder="i just bought a broccoli"></input>
         <input type="submit" value="Submit"></input>
       </form>
     )
