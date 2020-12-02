@@ -1,6 +1,6 @@
 import React from 'react';
 import Posts from './posts'
-const client = require('../client');
+const client = require('../../client');
 
 class PostsBuilder extends React.Component {
     constructor(props) {
@@ -19,6 +19,7 @@ class PostsBuilder extends React.Component {
         console.log(post);
         client({method: 'DELETE', path: post})
     }
+
 
 	render() {
 	    return (
