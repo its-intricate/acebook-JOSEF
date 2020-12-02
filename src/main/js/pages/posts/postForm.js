@@ -17,6 +17,7 @@ class PostForm extends React.Component {
     this.addPost()
     alert('New Post Added: ' + this.state.value);
     event.preventDefault();
+    window.location.reload(false);
   }
 
   addPost() {

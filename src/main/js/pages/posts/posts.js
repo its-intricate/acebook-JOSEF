@@ -12,11 +12,12 @@ class Posts extends React.Component {
     handleDelete(event) {
       const id = event.target.id
       this.props.onDelete(id);
+      window.location.reload(false);
     }
 
     handleUpdate(event) {
        const id = event.target.id
-       const text = event.target.className
+       const text = event.target.name
        const update = prompt("What would you like to change your post to?", text);
         const requestOptions = {
                      method: 'PUT',
@@ -25,6 +26,7 @@ class Posts extends React.Component {
              };
              fetch(id, requestOptions)
              .then(response => response.json())
+        window.location.reload(false);
     }
 
 
@@ -32,7 +34,7 @@ class Posts extends React.Component {
 		return (
       <article className='posts-main'>
         <h1 className='posts-title'>
-           Posts
+           <center>Posts</center>
         </h1>
   			<div className='posts-items'>
   				{this.getPosts()}

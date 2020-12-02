@@ -24,11 +24,10 @@ class Navigation extends React.Component {
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                      <Nav.Link as={Link} to="new">New Post</Nav.Link>
                       <NavDropdown title="My Account" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="#profile">View Profile</NavDropdown.Item>
-                        <NavDropdown.Item href="#settings">Manage Settings</NavDropdown.Item>
-                        <NavDropdown.Item href="#help">Help</NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to="profile">View Profile</NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to="settings">Manage Settings</NavDropdown.Item>
+                        <NavDropdown.Item as={Link} to="help">Help</NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#log_out">Log Out</NavDropdown.Item>
                       </NavDropdown>

@@ -7,8 +7,8 @@ const Post = (props) => {
 			<div className='post-content'>
 				{props.post.content}
 			</div>
-		<button id={url} className={props.post.content} onClick={props.handleUpdate}>Edit</button>
-        <button id={props.post._links.self.href} onClick={props.handleDelete}>Delete</button>
+		<button id={url} name={props.post.content} className="btn btn-outline-secondary" onClick={props.handleUpdate}>Edit</button>
+        <button id={props.post._links.self.href} className="btn btn-outline-danger" onClick={props.handleDelete}>Delete</button>
 		</div>
 	)
 }

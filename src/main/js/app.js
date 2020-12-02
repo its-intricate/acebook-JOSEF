@@ -8,8 +8,10 @@ import {
   } from "react-router-dom";
 
 import Home from './pages/home';
-import NewPost from './pages/newPost';
-import Error from './pages/error';
+import Error404 from './pages/error404';
+import Profile from './pages/profile';
+import Settings from './pages/settings';
+import Help from './pages/help';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -21,8 +23,10 @@ class App extends React.Component {
         <main>
             <Switch>
                 <Route path="/" component={Home} exact />
-                <Route path="/new" component={NewPost} />
-                <Route component={Error} />
+                <Route path="/profile" component={Profile} />
+                <Route path="/settings" component={Settings} />
+                <Route path="/help" component={Help} />
+                <Route component={Error404} />
             </Switch>
         </main>
     )
