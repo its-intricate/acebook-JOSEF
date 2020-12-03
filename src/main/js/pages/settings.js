@@ -10,7 +10,7 @@ class Settings extends React.Component {
         <div>
             <Navigation />
             <center>
-            <div style={{width:"75%", textAlign:"left"}}>
+            <div className="mt-5" style={{width:"60%", textAlign:"left"}}>
                 <h1>Settings</h1>
                 <form>
                    <div class="form-group row">
@@ -35,7 +35,7 @@ class Settings extends React.Component {
                    </div>
                    <div className="form-group row">
                       <label for="location" className="col-sm-3 col-form-label">Location</label>
-                      <select className="form-control col-sm-7" id="location">
+                      <select className="form-control col-sm-7" placeholder="choose..."  id="location">
                         <option>England</option>
                         <option>Scotland</option>
                         <option>Wales</option>
@@ -43,7 +43,7 @@ class Settings extends React.Component {
                         <option>Outside of the UK</option>
                       </select>
                    </div>
-                   <input type="submit" placeholder="choose..." className="col-sm-10 btn btn-info" value="Confirm" />
+                   <input type="submit" className="col-sm-10 btn btn-info" value="Confirm" />
                 </form>
               </div>
             </center>

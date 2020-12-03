@@ -18,11 +18,14 @@ class Posts extends React.Component {
     handleUpdate(event) {
        const id = event.target.id
        const text = event.target.name
+       const date = new Date();
+       console.log(date);
        const update = prompt("What would you like to change your post to?", text);
+       const data = { content: update, postdate: date }
         const requestOptions = {
                      method: 'PUT',
                      headers: { 'Content-Type': 'application/json' },
-                     body: JSON.stringify({ content: update })
+                     body: JSON.stringify(data)
              };
              fetch(id, requestOptions)
              .then(response => response.json())

@@ -8,7 +8,7 @@ class Profile extends React.Component {
     return (
         <div>
             <Navigation />
-            <center>
+            <center className="mt-5">
                 <h1>My Profile</h1>
                 <img
                 src="https://i.pinimg.com/736x/d1/3f/a5/d13fa5a26526fefa7069c0848dd7a21c.jpg"

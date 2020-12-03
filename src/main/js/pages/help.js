@@ -14,13 +14,13 @@ class Help extends React.Component {
     return (
         <div>
             <Navigation />
-            <body style={style}>
+            <div style={style}>
                 <center>
-                  <h1 color="white" margin-top= "300px">
+                  <h1 style={{color:"white", paddingTop:"250px"}}>
                     Sorry I cannot help you.
                   </h1>
                 </center>
-            </body>
+            </div>
         </div>
     )
   }
