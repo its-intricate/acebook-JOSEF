@@ -31,7 +31,7 @@ class PostForm extends React.Component {
 
   render() {
     return (
-      <form className="form-inline mt-5 mb-5" style={{width:"70vw"}} onSubmit={this.handleSubmit}>
+      <form className="form-inline mt-5 mb-4" style={{width:"70vw"}} onSubmit={this.handleSubmit}>
         <label className="mr-sm-3" for="new_post">What is on your mind?</label>
         <input type="text" id="new_post" style={{width:"70%"}} className="form-control mr-sm-3" placeholder="type here..." value={this.state.value} onChange={this.handleChange} />
         <button type="submit" className="btn btn-info">Post</button>

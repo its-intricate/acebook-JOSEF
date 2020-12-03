@@ -12,8 +12,11 @@ class Posts extends React.Component {
 
     handleDelete(event) {
       const id = event.target.id
-      this.props.onDelete(id);
-      window.location.reload(false);
+      var sure = confirm("Are you sure you want to delete this post?")
+      if (sure) {
+          this.props.onDelete(id);
+          window.location.reload(false);
+      }
     }
 
     handleUpdate(event) {
@@ -23,14 +26,16 @@ class Posts extends React.Component {
        console.log(date);
        const update = prompt("What would you like to change your post to?", text);
        const data = { content: update, postdate: date }
-        const requestOptions = {
+       if (update) {
+         const requestOptions = {
                      method: 'PUT',
                      headers: { 'Content-Type': 'application/json' },
                      body: JSON.stringify(data)
-             };
-             fetch(id, requestOptions)
-             .then(response => response.json())
-        window.location.reload(false);
+         };
+         fetch(id, requestOptions)
+         .then(response => response.json())
+         window.location.reload(false);
+       }
     }
 
     sort() {
@@ -43,8 +48,8 @@ class Posts extends React.Component {
 
 	render() {
 		return (
-      <article style={{width:"500px"}} className='posts-main'>
-        <h1 className='posts-title'>
+      <article className='posts-main'>
+        <h1 className='posts-title mb-2'>
            <center>Posts</center>
         </h1>
   			<div className='posts-items'>

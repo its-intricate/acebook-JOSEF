@@ -1,6 +1,5 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-import Navigation from '../components/navbar';
 
 class Settings extends React.Component {
 
@@ -8,7 +7,6 @@ class Settings extends React.Component {
     return (
 
         <div>
-            <Navigation />
             <center>
             <div className="mt-5" style={{width:"60%", textAlign:"left"}}>
                 <h1>Settings</h1>

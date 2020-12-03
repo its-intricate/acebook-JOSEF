@@ -1,13 +1,11 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
-import Navigation from '../components/navbar';
 
 class Profile extends React.Component {
 
   render() {
     return (
         <div>
-            <Navigation />
             <center className="mt-5">
                 <h1>My Profile</h1>
                 <img

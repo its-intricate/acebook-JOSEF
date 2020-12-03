@@ -1,7 +1,7 @@
 .posts-main {
     margin: auto;
     border-collapse: collapse;
-    max-width: 70vw;
+    width: 70vw;
 }
 
 .post-main {
@@ -13,4 +13,9 @@
     padding: 0.5rem;
     text-align: left;
     margin-bottom: 0.5rem;
+}
+
+a {
+    color: white;
+  text-decoration: none; /* no underline */
 }
