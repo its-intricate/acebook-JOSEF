@@ -1,8 +1,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 
-import Navigation from '../components/navbar';
-
 class Help extends React.Component {
 
   render() {
@@ -13,7 +11,6 @@ class Help extends React.Component {
         };
     return (
         <div>
-            <Navigation />
             <div style={style}>
                 <center>
                   <h1 style={{color:"white", paddingTop:"250px"}}>

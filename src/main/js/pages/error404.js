@@ -1,8 +1,6 @@
 const React = require('react');
 const ReactDOM = require('react-dom');
 
-import Navigation from '../components/navbar';
-
 class Error404 extends React.Component {
 
   render() {
@@ -13,10 +11,9 @@ class Error404 extends React.Component {
         };
     return (
         <div>
-            <Navigation />
             <div style={style}>
                 <center>
-                  <h1 style={{color:"white", paddingTop:"250px"}}>
+                  <h1 style={{color:"white", paddingTop:"300px"}}>
                     Error404
                   </h1>
                 </center>

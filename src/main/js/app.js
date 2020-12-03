@@ -7,6 +7,9 @@ import {
     useParams,
   } from "react-router-dom";
 
+import Navigation from './components/navbar';
+import Footer from './components/footer';
+
 import Home from './pages/home';
 import Error404 from './pages/error404';
 import Profile from './pages/profile';
@@ -16,11 +19,13 @@ import Help from './pages/help';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
 class App extends React.Component {
 
   render() {
     return (
         <main>
+            <Navigation />
             <Switch>
                 <Route path="/" component={Home} exact />
                 <Route path="/profile" component={Profile} />
@@ -28,6 +33,7 @@ class App extends React.Component {
                 <Route path="/help" component={Help} />
                 <Route component={Error404} />
             </Switch>
+            <Footer />
         </main>
     )
   }
