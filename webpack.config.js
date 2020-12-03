@@ -9,6 +9,7 @@ module.exports = {
         filename: './src/main/resources/static/built/bundle.js'
     },
     module: {
+
         rules: [
             {
                 test: path.join(__dirname, '.'),
@@ -18,6 +19,10 @@ module.exports = {
                     cacheDirectory: true,
                     presets: ['es2015', 'react']
                 }
+            },
+            {
+              test: /\.css$/,
+              use: ['style-loader', 'css-loader'],
             }
         ]
     }
