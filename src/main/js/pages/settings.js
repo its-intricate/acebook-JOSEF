@@ -8,7 +8,7 @@ class Settings extends React.Component {
 
         <div>
             <center>
-            <div className="mt-5" style={{width:"60%", textAlign:"left"}}>
+            <div className="mt-5" style={{width:"60%", marginBottom:"500px", textAlign:"left"}}>
                 <h1>Settings</h1>
                 <form>
                    <div class="form-group row">

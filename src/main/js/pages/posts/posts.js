@@ -48,7 +48,7 @@ class Posts extends React.Component {
 
 	render() {
 		return (
-      <article className='posts-main'>
+      <article style={{marginBottom:"500px"}} className='posts-main'>
         <h1 className='posts-title mb-2'>
            <center>Posts</center>
         </h1>
