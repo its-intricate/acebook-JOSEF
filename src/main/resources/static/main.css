@@ -1,11 +1,14 @@
 .posts-main {
     margin: auto;
     border-collapse: collapse;
+    max-width: 500px;
+    width: 500px;
 }
 
 .post-main {
+    margin: auto;
     border: 1px solid #999;
     padding: 0.5rem;
     text-align: left;
-    margin-bottom: 0.5rem;;
+    margin-bottom: 0.5rem;
 }

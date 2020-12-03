@@ -11,10 +11,10 @@ class Home extends React.Component {
     return (
         <div>
             <Navigation />
-            <div>
+            <center>
                 <PostForm />
                 <PostsBuilder />
-            </div>
+            </center>
         </div>
     )
   }

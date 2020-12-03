@@ -8,6 +8,10 @@ import javax.persistence.GenerationType;
 
 import lombok.Data;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 import org.hibernate.annotations.CreationTimestamp;
 
 @Data
@@ -15,15 +19,16 @@ import org.hibernate.annotations.CreationTimestamp;
 @Table(name = "POSTS")
 public class Post {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
     private String content;
     @CreationTimestamp
-    private LocalDate postdate;
-
+    private LocalDateTime postdate;
 
     private Post() {}
+
 
     public Post(String content) {
         this.postdate = postdate;
