@@ -13,7 +13,7 @@ class Error404 extends React.Component {
         <div>
             <div style={style}>
                 <center>
-                  <h1 style={{color:"white", paddingTop:"250px"}}>
+                  <h1 style={{color:"white", paddingTop:"300px"}}>
                     Error404
                   </h1>
                 </center>
