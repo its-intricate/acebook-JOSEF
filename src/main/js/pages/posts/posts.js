@@ -7,6 +7,7 @@ class Posts extends React.Component {
     this.getPosts = this.getPosts.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
+    this.sort = this.sort.bind(this)
     }
 
     handleDelete(event) {
@@ -18,17 +19,27 @@ class Posts extends React.Component {
     handleUpdate(event) {
        const id = event.target.id
        const text = event.target.name
+       const date = new Date();
+       console.log(date);
        const update = prompt("What would you like to change your post to?", text);
+       const data = { content: update, postdate: date }
         const requestOptions = {
                      method: 'PUT',
                      headers: { 'Content-Type': 'application/json' },
-                     body: JSON.stringify({ content: update })
+                     body: JSON.stringify(data)
              };
              fetch(id, requestOptions)
              .then(response => response.json())
         window.location.reload(false);
     }
 
+    sort() {
+        const unsorted = this.props.posts;
+        const sorted = unsorted.sort((a, b) => {
+            return new Date(b.postdate) - new Date(a.postdate);
+        });
+        return sorted
+    }
 
 	render() {
 		return (
@@ -44,7 +55,7 @@ class Posts extends React.Component {
 	}
 
     getPosts() {
-        return this.props.posts.map(post =>
+        return this.sort().map(post =>
             <Post key={post._links.self.href} post={post} handleUpdate={this.handleUpdate} handleDelete={this.handleDelete} />
         );
     }

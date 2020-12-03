@@ -20,7 +20,6 @@ class PostsBuilder extends React.Component {
         client({method: 'DELETE', path: post})
     }
 
-
 	render() {
 	    return (
             <Posts posts={this.state.posts} onDelete={this.onDelete}/>

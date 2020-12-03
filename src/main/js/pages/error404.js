@@ -7,20 +7,20 @@ class Error404 extends React.Component {
 
   render() {
     var style = {
-                backgroundImage:"url(" + "http://www.todayifoundout.com/wp-content/uploads/2019/04/flipping-the-bird.png" + ")",
-                backgroundSize:"100%",
-                height: "100vh"
-            };
+            backgroundImage:"url(" + "http://www.todayifoundout.com/wp-content/uploads/2019/04/flipping-the-bird.png" + ")",
+            backgroundSize:"100%",
+            height: "100vh"
+        };
     return (
-        <div >
+        <div>
             <Navigation />
-            <body style={style}>
+            <div style={style}>
                 <center>
-                  <h1 style="color:white;margin-top:300px">
-                    Error 404
+                  <h1 style={{color:"white", paddingTop:"250px"}}>
+                    Error404
                   </h1>
                 </center>
-            </body>
+            </div>
         </div>
     )
   }

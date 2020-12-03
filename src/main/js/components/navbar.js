@@ -18,7 +18,7 @@ class Navigation extends React.Component {
                   </Navbar.Brand>
                    <Form inline>
                       <FormControl type="text" placeholder="username" className="mr-sm-2" />
-                      <FormControl type="text" placeholder="password" className="mr-sm-2" />
+                      <FormControl type="password" placeholder="password" className="mr-sm-2" />
                       <Button variant="outline-info">Log In</Button>
                    </Form>
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
