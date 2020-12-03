@@ -7,11 +7,11 @@ const Post = (props) => {
 			<div className='post-content'>
 				{props.post.content}
 			</div>
-      <div className='post-date'>
+            <div className='post-date'>
 			    {props.post.postdate}
 			</div>
-		<button id={url} name={props.post.content} className="btn btn-outline-secondary" onClick={props.handleUpdate}>Edit</button>
-        <button id={props.post._links.self.href} className="btn btn-outline-danger" onClick={props.handleDelete}>Delete</button>
+            <button id={url} name={props.post.content} className="btn btn-outline-secondary" onClick={props.handleUpdate}>Edit</button>
+            <button id={props.post._links.self.href} className="btn btn-outline-danger" onClick={props.handleDelete}>Delete</button>
 		</div>
 	)
 }
