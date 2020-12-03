@@ -7,6 +7,7 @@ class Posts extends React.Component {
     this.getPosts = this.getPosts.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
+    this.sort = this.sort.bind(this)
     }
 
     handleDelete(event) {
@@ -32,6 +33,13 @@ class Posts extends React.Component {
         window.location.reload(false);
     }
 
+    sort() {
+        const unsorted = this.props.posts;
+        const sorted = unsorted.sort((a, b) => {
+            return new Date(b.postdate) - new Date(a.postdate);
+        });
+        return sorted
+    }
 
 	render() {
 		return (
@@ -47,7 +55,7 @@ class Posts extends React.Component {
 	}
 
     getPosts() {
-        return this.props.posts.map(post =>
+        return this.sort().map(post =>
             <Post key={post._links.self.href} post={post} handleUpdate={this.handleUpdate} handleDelete={this.handleDelete} />
         );
     }
