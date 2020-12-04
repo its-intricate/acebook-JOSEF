@@ -7,7 +7,17 @@ const Post = (props) => {
     var date = postdate.slice(0,10);
     var time = postdate.slice(11,16);
     const [open, setOpen] = React.useState(false);
+    var listId = "list" + postdate;
+    var commentId = "comment" + postdate;
 
+
+    function addComment() {
+      var list = document.getElementById(listId);
+      var listItem = document.createElement("li");
+      var input = document.getElementById(commentId);
+      listItem.innerText = input.value;
+      list.appendChild(listItem);
+    }
 
 	return (
 		<div className='post-main'>
@@ -22,7 +32,7 @@ const Post = (props) => {
                 variant="outline-info"
                 className="btn btn-sm mr-2"
               >
-                View Comments   <span className="badge badge-info">2</span>
+                View Comments
               </Button>
               <button class="btn btn-sm mr-5 btn-outline-info">like</button>
               <button id={url} name={props.post.content} className="btn btn-sm mr-2 btn-outline-dark" onClick={props.handleUpdate}>Edit</button>
@@ -37,10 +47,15 @@ const Post = (props) => {
             <Collapse in={open}>
                 <div className="mt-4" id={postdate}>
                   Comments:
-                  <ul>
+                  <ul id={listId}>
                     <li>Brilliant</li>
                     <li>Great stuff!</li>
                   </ul>
+                  <form onSubmit={addComment} className="form-inline mt-3 mb-3">
+                      <label className="mr-sm-3" for={props.post.content}>Comment</label>
+                      <input type="text" id={commentId} style={{width:"80%"}} className="form-control mr-sm-3" placeholder="type here..." />
+                      <button type="submit" className="btn btn-sm btn-info">Add</button>
+                  </form>
                 </div>
             </Collapse>
 		</div>

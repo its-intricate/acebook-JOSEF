@@ -6,7 +6,7 @@ class Footer extends React.Component {
         return (
             <footer style={{backgroundColor:"#343a40"}} className="page-footer font-small">
               <div style={{color:"white"}} className="footer-copyright text-center py-3">© 2020 Copyright:
-                <a style={{textDecoration:"none", color:"inherit"}} href="http://localhost:8080/#/"> Acebook </a>
+                <a style={{textDecoration:"none", color:"inherit"}} as={Link} to="/"> Acebook </a>
               </div>
             </footer>
         );
