@@ -8,6 +8,14 @@ const Post = (props) => {
     var time = postdate.slice(11,16);
     const [open, setOpen] = React.useState(false);
 
+    function addComment(list, inputField) {
+      var list = document.getElementById(list);
+      var listItem = document.createElement("li");
+      listItem.innerText = inputField.value; // passed the field.
+      list.appendChild(listItem);
+      return false; // stop submission
+    }
+
 
 	return (
 		<div className='post-main'>
@@ -41,6 +49,11 @@ const Post = (props) => {
                     <li>Brilliant</li>
                     <li>Great stuff!</li>
                   </ul>
+                  <form className="form-inline mt-3 mb-3">
+                      <label className="mr-sm-3" for="new_comment">Comment</label>
+                      <input type="text" id="new_comment" style={{width:"80%"}} className="form-control mr-sm-3" placeholder="type here..." />
+                      <button type="submit" className="btn btn-sm btn-info">Add</button>
+                  </form>
                 </div>
             </Collapse>
 		</div>
