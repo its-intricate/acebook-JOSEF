@@ -13,8 +13,6 @@ import lombok.Data;
 @Table(name = "USERS")
 public class User {
 
-    //public static final PasswordEncoder PASSWORD_ENCODER = new BCryptPasswordEncoder(); (1)
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
