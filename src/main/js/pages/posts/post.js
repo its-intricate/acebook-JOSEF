@@ -33,7 +33,6 @@ const Post = (props) => {
                 className="btn btn-sm mr-2"
               >
                 View Comments
-                <span className="badge badge-info ml-1"> 2 </span>
               </Button>
               <button class="btn btn-sm mr-5 btn-outline-info">like</button>
               <button id={url} name={props.post.content} className="btn btn-sm mr-2 btn-outline-dark" onClick={props.handleUpdate}>Edit</button>

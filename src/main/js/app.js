@@ -19,8 +19,6 @@ import Signup from './pages/signup';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-
 class App extends React.Component {
 
   render() {

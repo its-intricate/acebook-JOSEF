@@ -17,7 +17,7 @@ class Signup extends React.Component {
     this.myChangeHandler = this.myChangeHandler.bind(this);
     };
 
-    myChangeHandler(event)  {
+    myChangeHandler(event) {
         let name = event.target.name;
         let val = event.target.value;
         this.setState({[name]: val});
