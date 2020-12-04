@@ -17,9 +17,7 @@ const Post = (props) => {
       var input = document.getElementById(commentId);
       listItem.innerText = input.value;
       list.appendChild(listItem);
-      window.location.reload(false);
     }
-
 
 	return (
 		<div className='post-main'>

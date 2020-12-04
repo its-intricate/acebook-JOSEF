@@ -12,7 +12,7 @@ class Signup extends React.Component {
             lastname: '',
             email: '',
             password: ''
-        };
+        }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.myChangeHandler = this.myChangeHandler.bind(this);
     };
@@ -24,10 +24,12 @@ class Signup extends React.Component {
     };
 
     handleSubmit() {
+        event.preventDefault();
         this.addUser()
     };
 
     addUser() {
+           console.log(this.state.value)
           const requestOptions = {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
@@ -35,6 +37,7 @@ class Signup extends React.Component {
           };
           fetch('http://localhost:8080/api/users', requestOptions)
           .then(response => response.json())
+
       };
 
   render() {
