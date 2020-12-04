@@ -6,7 +6,7 @@ class Navigation extends React.Component {
     render () {
         return (
             <Navbar sticky="top" bg="dark" variant="dark" expand="lg">
-                  <Navbar.Brand href="/">
+                  <Navbar.Brand as={Link} to="home">
                     <img
                         alt="Acebook"
                         src="http://1.bp.blogspot.com/-nuwapOiwsgg/UkAFIS9WFII/AAAAAAAAAPs/5jEvH7ag3l0/s1600/AH+Logo+free+download+copy.png"
@@ -16,10 +16,10 @@ class Navigation extends React.Component {
                     />{' '}
                     Acebook
                   </Navbar.Brand>
-                   <Form inline>
+                   <Form inline onSubmit={this.handleSubmit}>
                       <FormControl type="text" placeholder="username" className="ml-4 mr-sm-2" />
                       <FormControl type="password" placeholder="password" className="mr-sm-2" />
-                      <Button variant="outline-info">Log In</Button>
+                      <Button variant="outline-info" type="submit">Log In</Button>
                    </Form>
                   <Navbar.Toggle aria-controls="basic-navbar-nav" />
                   <Navbar.Collapse id="basic-navbar-nav">
@@ -29,6 +29,7 @@ class Navigation extends React.Component {
                         <NavDropdown.Item as={Link} to="settings">Manage Settings</NavDropdown.Item>
                         <NavDropdown.Item as={Link} to="help">Help</NavDropdown.Item>
                         <NavDropdown.Divider />
+                        <NavDropdown.Item as={Link} to="signup">Sign Up</NavDropdown.Item>
                         <NavDropdown.Item href="#log_out">Log Out</NavDropdown.Item>
                       </NavDropdown>
                     </Nav>

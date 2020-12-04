@@ -15,6 +15,7 @@ import Error404 from './pages/error404';
 import Profile from './pages/profile';
 import Settings from './pages/settings';
 import Help from './pages/help';
+import Signup from './pages/signup';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -30,6 +31,7 @@ class App extends React.Component {
                 <Route path="/" component={Home} exact />
                 <Route path="/profile" component={Profile} />
                 <Route path="/settings" component={Settings} />
+                <Route path="/signup" component={Signup} />
                 <Route path="/help" component={Help} />
                 <Route component={Error404} />
             </Switch>
